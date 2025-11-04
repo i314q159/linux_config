@@ -1,0 +1,8 @@
+# 1. 生成密钥对（如果尚未生成）
+ssh-keygen -t rsa
+ 
+# 2. 将公钥上传到远程服务器
+ssh-copy-id -i ~/.ssh/id_rsa.pub user@remote_ip
+ 
+# 3. 免密使用scp
+scp file.txt user@remote_ip:/dir/
