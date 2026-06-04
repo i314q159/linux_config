@@ -1,0 +1,29 @@
+# proxy
+#export http_proxy="127.0.0.1:7890"
+#export https_proxy="127.0.0.1:7890"
+#export all_proxy="127.0.0.1:7890"
+
+# bin
+export PATH=$HOME/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
+
+# nvim
+# export PATH=$HOME/bin/nvim-linux64/bin:$PATH
+
+# repo
+export REPO_URL="https://mirrors.tuna.tsinghua.edu.cn/git/git-repo"
+
+# alias
+alias ll="ls -al --color=auto"
+
+# ghproxy    
+ghproxy_url="https://ghproxy.net/"
+function ghproxy-curl() {
+    curl -O $ghproxy_url$1
+}
+
+function ghproxy-git() {
+    git clone $ghproxy_url$1
+}
+
+eval "$(starship init bash)"
